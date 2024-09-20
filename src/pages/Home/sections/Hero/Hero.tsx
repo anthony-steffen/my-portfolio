@@ -1,17 +1,24 @@
-import { Button, Container, Grid, styled, Typography } from "@mui/material";
+import {Container, Grid, styled, Typography } from "@mui/material";
 import Avatar from "../../../../assets/Avatar.png";
 import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
+import StyledButton from "../../../../components/StyledButton/StyledButton";
+
+
 const Hero = () => {
 	const StyledHero = styled("div")(({theme}) => ({
 		backgroundColor: theme.palette.primary.main,
 		height: "100vh",
+		display: "flex",
+		alignItems: "center",
 	}));
 
 	const StyledImg = styled("img")(() => ({
-		width: "100%",
+		width: "80%",
 		borderRadius: "50%",
 		objectFit: "cover",
+		display: "flex",
+		margin: "auto",
 	}));
 	return (
 		<>
@@ -26,21 +33,25 @@ const Hero = () => {
 								Anthony Steffen
 							</Typography>
 							<Typography variant="h4" textAlign="center" color='secondary'>
-								Im a Web Developer full Stack
+								I'm a Web Developer Full Stack
 							</Typography>
 
 							<Grid container spacing={2} display="flex" justifyContent="center">
-								<Grid item xs={12} md={4} display="flex" justifyContent="center" mt={2}>
-									<Button variant="outlined" color="secondary">
-										<DownloadIcon />
-										Download CV
-									</Button>
+								<Grid item xs={12} md={4} display="flex" justifyContent="center">
+								<StyledButton>
+									<DownloadIcon />
+										<Typography>
+											Download CV
+										</Typography>
+									</StyledButton>
 								</Grid>
 								<Grid item xs={12} md={4} display="flex" justifyContent="center">
-								<Button variant="outlined" color="secondary">
+								<StyledButton>
 										<EmailIcon />
-										Contact me
-									</Button>
+											<Typography>
+												Contact me
+											</Typography>
+								</StyledButton>
 								</Grid>
 							</Grid>
 						</Grid>
