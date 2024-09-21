@@ -4,7 +4,6 @@ import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 
-
 const Hero = () => {
 	const StyledHero = styled("div")(({theme}) => ({
 		backgroundColor: theme.palette.primary.main,
@@ -13,9 +12,10 @@ const Hero = () => {
 		alignItems: "center",
 	}));
 
-	const StyledImg = styled("img")(() => ({
+	const StyledImg = styled("img")(({theme}) => ({
 		width: "80%",
 		borderRadius: "50%",
+		border: `solid 1px ${theme.palette.primary.contrastText}`,
 		objectFit: "cover",
 		display: "flex",
 		margin: "auto",
@@ -25,14 +25,14 @@ const Hero = () => {
 			<StyledHero>
 				<Container maxWidth="lg">
 					<Grid container spacing={2}>
-						<Grid item xs={12} md={4}>
+						<Grid item xs={12} md={5}>
 							<StyledImg src={Avatar} alt="Avatar" />
 						</Grid>
-						<Grid item xs={12} md={8}>
+						<Grid item xs={12} md={7}>
 							<Typography variant="h1" textAlign="center" color='secondary'>
 								Anthony Steffen
 							</Typography>
-							<Typography variant="h4" textAlign="center" color='secondary'>
+							<Typography variant="h4" textAlign="center" color='secondary' mb={1}>
 								I'm a Web Developer Full Stack
 							</Typography>
 
