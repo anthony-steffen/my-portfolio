@@ -14,7 +14,7 @@ const Hero = () => {
 	}));
 
 	const StyledImg = styled("img")(({theme}) => ({
-		width: "80%",
+		width: "70%",
 		borderRadius: "50%",
 		border: `solid 1px ${theme.palette.primary.contrastText}`,
 		objectFit: "cover",
@@ -31,10 +31,10 @@ const Hero = () => {
 							<StyledImg src={Avatar} alt="Avatar" />
 						</Grid>
 						<Grid item xs={12} md={7}>
-							<Typography variant="h1" textAlign="center" color='secondary'>
+							<Typography variant="h1" textAlign="center" color='secondary' py={2}>
 								Anthony Steffen
 							</Typography>
-							<Typography variant="h4" textAlign="center" color='secondary' mb={1}>
+							<Typography variant="h4" textAlign="center" color='secondary' pb={3}>
 								I'm a Web Developer Full Stack
 							</Typography>
 
