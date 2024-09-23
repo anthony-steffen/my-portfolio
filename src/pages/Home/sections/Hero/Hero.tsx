@@ -10,6 +10,7 @@ const Hero = () => {
 		height: "100vh",
 		display: "flex",
 		alignItems: "center",
+
 	}));
 
 	const StyledImg = styled("img")(({theme}) => ({
@@ -19,12 +20,13 @@ const Hero = () => {
 		objectFit: "cover",
 		display: "flex",
 		margin: "auto",
+		position: "relative",
 	}));
 	return (
 		<>
 			<StyledHero>
 				<Container maxWidth="lg">
-					<Grid container spacing={2}>
+					<Grid container spacing={2} position="relative">
 						<Grid item xs={12} md={5}>
 							<StyledImg src={Avatar} alt="Avatar" />
 						</Grid>
@@ -36,7 +38,7 @@ const Hero = () => {
 								I'm a Web Developer Full Stack
 							</Typography>
 
-							<Grid container spacing={2} display="flex" justifyContent="center">
+							<Grid container spacing={2} display="flex" justifyContent="center" position="relative">
 								<Grid item xs={12} md={4} display="flex" justifyContent="center">
 								<StyledButton>
 									<DownloadIcon />

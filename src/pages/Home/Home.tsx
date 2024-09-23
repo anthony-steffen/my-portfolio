@@ -4,8 +4,8 @@ import StyledBackground from "../../components/StyledBackground/StyledBackground
 const Home = () => {
   return (
     <>
-    <Hero/>
     <StyledBackground/>
+    <Hero/>
     </>
   )
 }
