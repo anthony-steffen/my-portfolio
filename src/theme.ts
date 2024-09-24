@@ -4,12 +4,11 @@ let theme = createTheme({
   palette: {
     primary: {
       main: '#232323',
-      //main: '#232323',#556cd6
     },
     secondary: {
       main: '#4f8e3e',
-      //main: '#4f8e3e',#19857b
     },
+  
   },
   typography: {
     fontFamily: [
@@ -24,7 +23,17 @@ let theme = createTheme({
         // '"Segoe UI Emoji"',
         // '"Segoe UI Symbol"',
     ].join(','),
-}
+},
+
+breakpoints: {
+  values: {
+    xs: 0,
+    sm: 600,
+    md: 960,
+    lg: 1280,
+    xl: 1920,
+  },
+},
 });
 
 theme = responsiveFontSizes(theme);

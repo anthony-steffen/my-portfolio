@@ -1,8 +1,10 @@
 import { AppBar, MenuItem, Toolbar, styled } from "@mui/material"
+import { useNavigate } from "react-router-dom";
 
 
 const NavBar = () => {
 
+  const navigation = useNavigate();
   const StyledToolbar = styled(Toolbar)(({theme}) => ({
     backgroundColor: theme.palette.primary.main,
     display: "flex",
@@ -15,16 +17,16 @@ const NavBar = () => {
   return (
     <AppBar position="absolute">
       <StyledToolbar>
-        <MenuItem>
+        <MenuItem onClick={() => navigation("/")}>
           Home
         </MenuItem>
-        <MenuItem>
+        <MenuItem onClick={() => navigation("/about")}>
           About
         </MenuItem>
-        <MenuItem>
-          Portfolio
+        <MenuItem onClick={() => navigation("/projects")}>
+          Projects
         </MenuItem>
-        <MenuItem>
+        <MenuItem onClick={() => navigation("/contact")}>
           Contact
         </MenuItem>
       </StyledToolbar>
