@@ -10,17 +10,25 @@ const Hero = () => {
 		height: "100vh",
 		display: "flex",
 		alignItems: "center",
+		[theme.breakpoints.down("md")]: {
+			backgroundColor: theme.palette.primary.dark,
+		},
 
 	}));
 
 	const StyledImg = styled("img")(({theme}) => ({
-		width: "70%",
+		width: "80%",
 		borderRadius: "50%",
 		border: `solid 1px ${theme.palette.primary.contrastText}`,
 		objectFit: "cover",
 		display: "flex",
 		margin: "auto",
 		position: "relative",
+
+		[theme.breakpoints.down("md")]: {
+			width: "60%",
+		},
+		
 	}));
 	return (
 		<>

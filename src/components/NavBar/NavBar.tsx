@@ -8,6 +8,9 @@ const NavBar = () => {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
+    [theme.breakpoints.down("md")]: {
+			backgroundColor: theme.palette.primary.dark,
+		},
   }));
   return (
     <AppBar position="absolute">
