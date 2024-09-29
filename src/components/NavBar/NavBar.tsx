@@ -14,22 +14,6 @@ const NavBar = () => {
 		},
   }));
   return (
-<<<<<<< HEAD
-    <AppBar position="absolute">
-      <StyledToolbar>
-        <MenuItem onClick={() => navigation("/")}>
-          Home
-        </MenuItem>
-        <MenuItem onClick={() => navigation("/about")}>
-          About
-        </MenuItem>
-        <MenuItem onClick={() => navigation("/projects")}>
-          Projects
-        </MenuItem>
-        <MenuItem onClick={() => navigation("/contact")}>
-          Contact
-        </MenuItem>
-=======
     <AppBar>
             <StyledToolbar>
             <MenuItem onClick={() => navigation("/")}>
@@ -44,7 +28,6 @@ const NavBar = () => {
             <MenuItem onClick={() => navigation("/contact")}>
               Contact
             </MenuItem>
->>>>>>> 2849ff25fd32fb87840844cf0996a602f8fa18ba
       </StyledToolbar>
         </AppBar>
   )
