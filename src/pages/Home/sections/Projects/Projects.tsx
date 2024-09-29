@@ -1,31 +1,35 @@
 // src/components/Projects.tsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Grid, Container, Card, CardMedia, CardContent, Typography, styled } from '@mui/material';
 import { projectsData } from '../../../../data/projectsData' // Importando os dados dos projetos
-import Bg from '../../../../assets/vecteezy_minimal-abstract-circuit-technology-background_22513757.jpg'; // Importando a imagem de fundo
+import Bg from '../../../../assets/vecteezy_virtual-tecnology-blue-vector-background-eps-10_10742634.jpg'; // Importando a imagem de fundo
 // Componente do Card de Projeto usando Material UI
 interface ProjectCardProps {
   title: string;
   description: string;
   imageUrl: string;
+  url: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, imageUrl }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, imageUrl, url }) => {
   return (
-    <Card sx={{ maxWidth: 345 }} style={{ margin: 'auto' }}>
+    <Card sx={{ maxWidth: 350 }} style={{ margin: 'auto' , border: '1px solid #000', boxShadow: '0 0 10px #000', borderRadius: '10px' }}>
       <CardMedia
         component="img"
-        height="200"
+        height="350"
         image={imageUrl}
         alt={title}
       />
-      <CardContent>
+      <CardContent style={{ textAlign: 'center', border: '1px solid #CCCCCC'}}>
+        <Link to={url} style={{ textDecoration: 'none'}} target="_blank">
         <Typography gutterBottom variant="h5" component="div">
           {title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {description}
         </Typography>
+        </Link>
       </CardContent>
     </Card>
   );
@@ -38,11 +42,13 @@ const Projects = () => {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundAttachment: 'fixed',
+    color: theme.palette.primary.contrastText,
+    
 
     [theme.breakpoints.up('md')]: {
-      paddingTop: '4rem',
+      paddingTop: '1rem',
       paddingBottom: '1rem',
-      height: '100vh',
+      height: '100%',
     },
     [theme.breakpoints.down('md')]: {
       paddingTop: '2rem',
@@ -62,16 +68,19 @@ const Projects = () => {
         paddingBottom: '1rem',
        }}>
         <Typography variant="h3" component="h1" gutterBottom align="center" mb={3}>
-          Meus Projetos
+          My Projects
         </Typography>
-        <Grid container spacing={4}>
-          {projectsData.map((project, index) => (
+        <Grid container spacing={2}>
+          {projectsData.map((project, index,) => (
             <Grid item xs={12} sm={6} md={4} lg={4} key={index}>
+              {/* <Link to={project.url} style={{ textDecoration: 'none'}} target="_blank"> */}
               <ProjectCard
                 title={project.title}
                 description={project.description}
                 imageUrl={project.imageUrl}
+                url={project.url}
               />
+              {/* </Link> */}
             </Grid>
           ))}
         </Grid>

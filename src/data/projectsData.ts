@@ -1,3 +1,4 @@
+import FinanceApp from "../assets/hf.jpg";
 export interface Project {
   title: string;
   description: string;
@@ -5,12 +6,13 @@ export interface Project {
   url: string;
 }
 
+
 export const projectsData: Project[] = [
   {
-    title: "Project 1",
-    description: "Description 1",
-    imageUrl: "https://via.placeholder.com/150",
-    url: "https://www.google.com",
+    title: "My Finance App",
+    description: "One of my first projects, a finance app that helps you to control your expenses and incomes.",
+    imageUrl: FinanceApp,
+    url: "https://anthony-steffen.github.io/my-finance-app/",
   },
   {
     title: "Project 2",
