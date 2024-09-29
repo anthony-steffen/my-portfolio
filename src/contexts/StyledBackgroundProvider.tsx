@@ -1,17 +1,16 @@
-import { useState } from "react";
-import StyledBackgroundContext from "./StyledBackgroundContext";
+// import { useState } from "react";
+// import StyledBackgroundContext from "./StyledBackgroundContext";
 
-interface StyledBackgroundStats {
+// interface StyledBackgroundStats {
+// const StyledBackgroundProvider: React.FC = ({ children }: StyledBackgroundProviderProps) => {
 
-const StyledBackgroundProvider: React.FC = ({ children }: StyledBackgroundProviderProps) => {
+//   const [fireflyStyles, setFireflyStyles] = useState<string[]>([]);
 
-  const [fireflyStyles, setFireflyStyles] = useState<string[]>([]);
+//   return (
+//     <StyledBackgroundContext.Provider value={fireflyStyles}>
+//       {children}
+//     </StyledBackgroundContext.Provider>
+//   );
+// }
 
-  return (
-    <StyledBackgroundContext.Provider value={fireflyStyles}>
-      {children}
-    </StyledBackgroundContext.Provider>
-  );
-}
-
-export default StyledBackgroundProvider;
+// export default StyledBackgroundProvider;
