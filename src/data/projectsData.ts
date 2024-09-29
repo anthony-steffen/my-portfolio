@@ -1,4 +1,5 @@
 import FinanceApp from "../assets/hf.jpg";
+import ReactSass from "../assets/React-sass.jpg";
 export interface Project {
   title: string;
   description: string;
@@ -15,23 +16,10 @@ export const projectsData: Project[] = [
     url: "https://anthony-steffen.github.io/my-finance-app/",
   },
   {
-    title: "Project 2",
-    description: "Description 2",
-    imageUrl: "https://via.placeholder.com/150",
-    url: "https://www.google.com",
+    title: "React Sass Curriculo",
+    description: "A simple curriculum made with React and Sass.",
+    imageUrl: ReactSass,
+    url: "https://anthony-steffen.github.io/react-sass-curriculo/",
   },
-  {
-    title: "Project 3",
-    description: "Description 3",
-    imageUrl: "https://via.placeholder.com/150",
-    url: "https://www.google.com",
-  },
-
-  {
-    title: "Project 4",
-    description: "Description 4",
-    imageUrl: "https://via.placeholder.com/150",
-    url: "https://www.google.com",
-  },
- 
+  
 ];

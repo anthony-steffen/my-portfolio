@@ -48,7 +48,7 @@ const Projects = () => {
     [theme.breakpoints.up('md')]: {
       paddingTop: '1rem',
       paddingBottom: '1rem',
-      height: '100%',
+      height: '100vh',
     },
     [theme.breakpoints.down('md')]: {
       paddingTop: '2rem',
