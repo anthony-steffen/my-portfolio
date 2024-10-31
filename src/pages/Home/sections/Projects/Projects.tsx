@@ -21,7 +21,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, imageUrl,
         image={imageUrl}
         alt={title}
       />
-      <CardContent style={{ textAlign: 'center', border: '1px solid #CCCCCC'}}>
+      <CardContent style={{ 
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        textAlign: 'center', 
+        border: '1px solid #CCCCCC',
+        height: '10vh',
+        padding: '0.5rem',
+      }}>
         <Link to={url} style={{ textDecoration: 'none'}} target="_blank">
         <Typography gutterBottom variant="h5" component="div">
           {title}
